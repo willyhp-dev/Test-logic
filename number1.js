@@ -1,21 +1,13 @@
-function pointA() {
-  let number = 4;
-  let hasilA = 1;
-  for (let index = number; index > 0; index--) {
-    console.log("point A");
-    console.log(index + "*" + hasilA);
-    hasilA = hasilA * index;
-  }
+//no 1
+console.log(hitung(4))
+console.log(hitung(8))
+//function Hitung
+function hitung(angka) {
+    let result = `{${angka}*`;
+    let hasil = angka;
+    for (let i = angka-1; i >= 1; i--) {
+        hasil *= i
+        i === 1 ? result +=`${i}}` : result += `${i}*`
+    }
+    return `${result} = ${hasil}`
 }
-pointA();
-
-function pointB() {
-  let number = 8;
-  let hasilB = 1;
-  for (let index = number; index > 0; index--) {
-    console.log("point B");
-    console.log(index + "*" + hasilB);
-    hasilB = hasilB * index;
-  }
-}
-pointB();
